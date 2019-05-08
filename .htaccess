@@ -6,4 +6,4 @@ RewriteBase /
 RewriteCond $1 !^(index\.php|images|robots\.txt)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ cajero2/index.php/$1 [L,QSA]
+RewriteRule ^(.*)$ sis_cajero/index.php/$1 [L,QSA]
