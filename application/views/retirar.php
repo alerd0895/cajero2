@@ -58,6 +58,14 @@
 				success: function(resp){
 					if(resp == "1"){
 						alert("Se realizo el retiro correctamente");
+            $.ajax({
+                  url: base_url + "dashboard/consulta/" + id_usuario,
+                  type: "POST",
+                  success: function(resp){
+                    //console.log(resp);
+                    $("#monto_real").html(resp);
+                  }
+                });
 					}else{
 						alert("Ocurrio un error intentelo de nuevo");
 					}
