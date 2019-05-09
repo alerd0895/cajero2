@@ -12,15 +12,14 @@
           <h2 class="sub-header">Depositar</h2>
           <div class="col-md-4">
           <select class="form-control" id="sel1">
-          <option>$100.00</option>
-          <option>$200.00</option>
-          <option>$500.00</option>
-          <option>$1,000.00</option>
-          <option>$2,000.00</option>
-          <option>$5,000.00</option>
+						<option value="100">$100.00</option>
+						<option value="200">$200.00</option>
+						<option value="500">$500.00</option>
+						<option value="1000">$1,000.00</option>
+						<option value="2000">$2,000.00</option>
+						<option value="5000">$5,000.00</option>
           </select>
-          <br><button type="button" class="btn btn-success">Depositar</button>
-          <!--<button type="button" class="btn btn-primary" onclick = "OtraCantidad();">Otra cantidad</button>-->
+          <br><button type="button" class="btn btn-success" id="btn_depositar">Depositar</button>
           
 
             
@@ -28,3 +27,34 @@
         </div>
       </div>
     </div>
+		<script> 
+			(function ($) {
+				var base_url = "<?php echo base_url(); ?>";
+				var id_usuario = "<?php echo $this->session->userdata("id"); ?>";
+				//console.log(id_usuario);
+				$("#btn_depositar").on("click",function(e){
+					//capturar valor del select
+					var select = $("#sel1").val();
+					//console.log(select);
+					$.ajax({
+						url : base_url + "dashboard/deposito/" + id_usuario + "/" + select,
+						type : "POST",
+						success: function(resp){
+							if(resp == "1"){
+								alert("Se realizo el deposito correctamente");
+								$.ajax({
+									url: base_url + "dashboard/consulta/" + id_usuario,
+									type: "POST",
+									success: function(resp){
+										//console.log(resp);
+										$("#monto_real").html(resp);
+									}
+								});
+							}else{
+								alert("Ocurrio un error intentelo de nuevo");
+							}
+						}
+					});
+				});
+			})(jQuery); 
+		</script>

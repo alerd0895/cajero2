@@ -33,4 +33,32 @@ class Dashboard extends CI_Controller {
 		$this->load->view('depositar');
 		$this->load->view('retirar');
 	}
+	public function deposito($id_usuario,$monto){
+		$saldo = $this->Saldo_model->consulta($id_usuario);
+		$saldo = $saldo->monto;
+		//echo $saldo;
+		$newsaldo = $saldo + $monto;
+		//echo $newsaldo;
+		$data = array(
+			'monto' => $newsaldo
+		);
+		$resultado = $this->Saldo_model->updateSaldo($id_usuario,$data);
+		print_r($resultado);
+	}
+	public function retiro($id_usuario,$monto){
+		$saldo = $this->Saldo_model->consulta($id_usuario);
+		$saldo = $saldo->monto;
+		//echo $saldo;
+		$newsaldo = $saldo - $monto;
+		//echo $newsaldo;
+		$data = array(
+			'monto' => $newsaldo
+		);
+		$resultado = $this->Saldo_model->updateSaldo($id_usuario,$data);
+		print_r($resultado);
+	}
+	public function consulta($id_usuario){
+		$usuario = $this->Saldo_model->consulta($id_usuario);
+		echo $usuario->monto;
+	}
 }

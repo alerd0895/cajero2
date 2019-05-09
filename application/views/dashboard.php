@@ -63,10 +63,9 @@
               </thead>
               <tbody>
                 <tr>
-									
 									<td><?php echo $saldo->id_usuario; ?></td>
 									<td><?php echo $this->session->userdata("num_cuenta"); ?></td>
-									<td><?php echo $saldo->monto; ?></td>
+									<td id="monto_real"><?php echo $saldo->monto; ?></td>
                 </tr>
               </tbody>
             </table>

@@ -11,4 +11,8 @@ class Saldo_model extends CI_Model {
 			return false;
 		}
 	}
+	function updateSaldo($id_usuario,$data){
+		$this->db->where("id_usuario",$id_usuario);
+		return $this->db->update("saldos",$data);
+	}
 }
