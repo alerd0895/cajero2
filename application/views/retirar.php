@@ -44,34 +44,25 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Saldo <span class="sr-only">(current)</span></a></li>
+            <li><a>Saldo </a></li>
             <li><a>Depositar</a></li>
-            <li><a>Retirar</a></li>
+            <li class="active"><a href="#">Retirar<span class="sr-only">(current)</span></a></li>
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h2 class="sub-header">Saldo</h2>
-          <div class="table-responsive">
-
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>Cliente_ID</th>
-                  <th>Número de cuenta</th>
-                  <th>Cantidad</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>123456789123456789</td>
-                  <td>$4,500</td>
-                </tr>
-              </tbody>
-            </table>
-            <br><center><p><button type="button" class="btn btn-success">Depositar</button>
-            <button type="button" class="btn btn-danger">Retirar</button>
-            </p></center>
+          <h2 class="sub-header">Seleccione la cantidad que desea retirar</h2>
+          <div class="col-md-4">
+            <select class="form-control" id="sel1">
+          <option>$100.00</option>
+          <option>$200.00</option>
+          <option>$500.00</option>
+          <option>$1,000.00</option>
+          <option>$2,000.00</option>
+          <option>$5,000.00</option>
+          </select>
+          <br><button type="button" class="btn btn-success">Retirar</button>
+          <!--<button type="button" class="btn btn-primary" onclick = "OtraCantidad();">Otra cantidad</button>-->
+          
           </div>
         </div>
       </div>
