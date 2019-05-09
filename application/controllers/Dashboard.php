@@ -20,11 +20,17 @@ class Dashboard extends CI_Controller {
 	 */
 	public function __construct(){
 		parent::__construct();
+		$this->load->model('Saldo_model');
 	}
 	public function index()
 	{
-		$this->load->view('dashboard');
-		$this->load->view('depositar');
-		$this->load->view('retirar');
+		$id_usuario = $this->session->userdata("id");
+		$data = array (
+			'saldo' =>  $this->Saldo_model->consulta($id_usuario)
+		);
+		//print_r($data);
+		$this->load->view('dashboard', $data);
+		//$this->load->view('depositar');
+		//$this->load->view('retirar');
 	}
 }

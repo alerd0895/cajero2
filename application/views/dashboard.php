@@ -63,9 +63,10 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>1</td>
-                  <td>123456789123456789</td>
-                  <td>$4,500</td>
+									
+									<td><?php echo $saldo->id_usuario; ?></td>
+									<td><?php echo $this->session->userdata("num_cuenta"); ?></td>
+									<td><?php echo $saldo->monto; ?></td>
                 </tr>
               </tbody>
             </table>
