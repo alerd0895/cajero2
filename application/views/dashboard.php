@@ -39,16 +39,16 @@
       </div>
     </nav>
 
-    funtion 
+     
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
+        <!--<div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
             <li class="active"><a href="#">Saldo <span class="sr-only">(current)</span></a></li>
-            <li><a>Depositar</a></li>
+            <li class="depositar"><a>Depositar</a></li>
             <li><a>Retirar</a></li>
           </ul>
-        </div>
+        </div>-->
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h2 class="sub-header">Saldo</h2>
           <div class="table-responsive">
@@ -69,14 +69,13 @@
                 </tr>
               </tbody>
             </table>
-            <br><center><p><button type="button" class="btn btn-success">Depositar</button>
+            <!--<br><center><p><button type="button" class="btn btn-success">Depositar</button>
             <button type="button" class="btn btn-danger">Retirar</button>
-            </p></center>
+            </p></center>-->
           </div>
         </div>
       </div>
     </div>
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

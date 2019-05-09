@@ -39,18 +39,18 @@
       </div>
     </nav>
 
-    funtion 
+    
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
+        <!--<div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
             <li><a>Saldo</a></li>
             <li class="active"><a href="#">Depositar<span class="sr-only">(current)</span></a></li>
             <li><a>Retirar</a></li>
           </ul>
-        </div>
+        </div>-->
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h2 class="sub-header">Seleccione la cantidad: </h2>
+          <h2 class="sub-header">Depositar</h2>
           <div class="col-md-4">
           <select class="form-control" id="sel1">
           <option>$100.00</option>
