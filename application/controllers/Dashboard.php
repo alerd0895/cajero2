@@ -30,7 +30,7 @@ class Dashboard extends CI_Controller {
 		);
 		//print_r($data);
 		$this->load->view('dashboard', $data);
-		//$this->load->view('depositar');
-		//$this->load->view('retirar');
+		$this->load->view('depositar');
+		$this->load->view('retirar');
 	}
 }
